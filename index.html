@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AkinX AI — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{font-family:system-ui,Segoe UI, Roboto, sans-serif;padding:20px;max-width:980px;margin:auto;}
+    textarea{width:100%;height:120px;}
+    input, button{padding:10px;margin:6px 0;}
+    .row{display:flex;gap:8px;align-items:center;}
+    .kbd{background:#eee;border-radius:4px;padding:2px 6px;font-family:monospace;}
+    header{display:flex;justify-content:space-between;align-items:center;}
+    footer{margin-top:30px;color:#666;font-size:13px;}
+    .card{background:#fbfbfb;border:1px solid #eee;padding:12px;border-radius:10px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AkinX AI</h1>
+    <div>
+      <small>Demo — GitHub Pages friendly</small>
+    </div>
+  </header>
+
+  <p class="card">
+    <strong>Important security:</strong> Do <em>not</em> put real API keys into your public repo. Use GitHub Secrets for Actions or have users supply their own keys in the browser.
+  </p>
+
+  <section>
+    <h3>1) Provide API keys (stored only in your browser for this demo)</h3>
+    <div>
+      <label>OpenAI API Key:</label><br/>
+      <input id="openai-key" placeholder="sk-..." style="width:100%"/>
+      <label>ElevenLabs API Key (optional for TTS):</label><br/>
+      <input id="eleven-key" placeholder="eleven-..." style="width:100%"/>
+      <div style="margin-top:8px;">
+        <button id="save-keys">Save keys (local)</button>
+        <button id="clear-keys">Clear keys</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px;">
+    <h3>2) Ask AkinX AI</h3>
+    <textarea id="prompt" placeholder="Ask anything..."></textarea><br/>
+    <div class="row">
+      <button id="ask">Ask (OpenAI)</button>
+      <button id="ask-and-speak">Ask & Speak (OpenAI + ElevenLabs)</button>
+      <button id="image-gen">Generate image (Stability)</button>
+    </div>
+    <div id="status" style="margin-top:10px;color:#333;"></div>
+    <h3>Response</h3>
+    <pre id="response" style="white-space:pre-wrap;background:#f7f7f7;padding:12px;"></pre>
+    <div id="image-area" style="margin-top:12px;"></div>
+  </section>
+
+  <footer>
+    <p>Built for <strong>AkinX AI</strong>. See <span class="kbd">README.md</span> for full setup steps.</p>
+  </footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
