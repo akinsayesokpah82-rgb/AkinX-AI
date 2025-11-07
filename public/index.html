@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AkinX AI 🌐</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 AkinX AI</h1>
+    <p class="tag">Your all-in-one AI assistant (Chat • Voice • Image)</p>
+
+    <textarea id="prompt" placeholder="Ask AkinX anything..."></textarea>
+    <div class="btn-row">
+      <button id="chatBtn">💬 Chat</button>
+      <button id="speakBtn">🔊 Speak</button>
+      <button id="imageBtn">🎨 Generate Image</button>
+    </div>
+
+    <div id="response"></div>
+    <img id="resultImg" alt="AI Generated" />
+    <audio id="ttsAudio" controls hidden></audio>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
